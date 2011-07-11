@@ -125,6 +125,15 @@ nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 "Editing .vimrc on the fly (with source on write autocommand)
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" Fast align on : or = with Tabular
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:<CR>
+  vmap <Leader>a: :Tabularize /:<CR>
+endif
+
+
 " Switching windows made easyier
 nmap <C-Left> <C-w>h
 nmap <C-Down> <C-w>j
